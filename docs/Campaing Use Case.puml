@@ -1,0 +1,9 @@
+@startuml
+:vendég: -> :recepciós:
+:recepciós: --> (lekérdezheti az üres helyeket \n adott intervallumon belül)
+
+:recepciós: --> (kiadhat helyet)
+:recepciós: --> (foglalhat le )
+(kiadhat helyet) --> (elektromosság + költség )
+:recepciós: -->(számlát állít ki\n távozáskor)
+@enduml
