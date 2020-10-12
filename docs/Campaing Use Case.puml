@@ -7,5 +7,5 @@ vendég -> (hely kérvényezése a recepcióstól)
 
 :recepciós: --> (kiadhat helyet)
 :recepciós: --> (foglalhat le helyet )
-:recepciós: -->(számlát kér a rendszertöl\n a vendég távozáskor)
+:recepciós: -->(számlát állít ki\n távozáskor)
 @enduml
