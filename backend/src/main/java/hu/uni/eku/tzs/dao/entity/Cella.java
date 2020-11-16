@@ -21,7 +21,7 @@ public class Cella {
     @Column
     private boolean allapot;
     @Column
-    private LocalDateTime imaginaryPart;
+    private LocalDateTime erkezes;
     @Column
     private LocalDateTime tavozas
     @Column
