@@ -5,18 +5,22 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Spliterator;
+import java.util.Spliterators;
+import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+
 @RequiredArgsConstructor
 @Service
-public class GuestDaoImpl implements FoglalasDao {
+public class FoglalasDaoImpl implements FoglalasDao {
 
-    private final GuestRepository repository;
+    private final FoglalasRepository repository;
 
     @Override
     public void create(Foglalas foglalas) {
-        repository.save(GuestEntityModelConverter.model2entity(foglalas));
+        repository.save(FoglalasEntityModelConverter.model2entity(foglalas));
     }
 
     @Override
@@ -27,15 +31,15 @@ public class GuestDaoImpl implements FoglalasDao {
     }
 
     @Override
-    public void update(int cella_Id, Foglalas updated) {
-        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByCella_Id(cella_Id);
-        temp.setGuest_id(updated.getGuest_id());
+    public void update(UUID Foglalas_Id, Foglalas updated) {
+        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalas_Id(Foglalas_Id);
+        temp.setFoglalas_Id(updated.getFoglalas_Id());
         repository.save(temp);
     }
 
     @Override
-    public void delete(int guest_id) {
-        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuest_id(guest_id);
+    public void delete(UUID Foglalas_Id) {
+        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalas_Id(Foglalas_Id);
         if(temp != null)
             repository.delete(temp);
     }
@@ -43,13 +47,31 @@ public class GuestDaoImpl implements FoglalasDao {
     private static class FoglalasEntityModelConverter{
 
         private static Foglalas entity2model(hu.uni.eku.tzs.dao.entity.Foglalas entity){
-            return new Foglalas(entity.getCella_id(), entity.getArrivalDateTime());
+            return new Foglalas(
+                    entity.getFoglalas_Id(),
+                    entity.getCellaSzam(),
+                    entity.getErkezes(),
+                    entity.getTavozas(),
+                    entity.getVezeteknev(),
+                    entity.getKeresztnev(),
+                    entity.getTelefonszam(),
+                    entity.getTipus(),
+                    entity.getAram()   //bolean tipus kéne
+
+            );
         }
 
-        private static hu.uni.eku.afpc1.dao.entity.Guest model2entity(Guest model){
-            return hu.uni.eku.afpc1.dao.entity.Guest.builder()
-                    .guest_id(model.getGuest_id())
-                    .arrivalDateTime(model.getArrivalDateTime())
+        private static hu.uni.eku.tzs.dao.entity.Foglalas model2entity(Foglalas model){
+            return hu.uni.eku.tzs.dao.entity.Foglalas.builder()
+                    .Foglalas_Id(model.getFoglalas_Id())
+                    .cellaSzam(model.getCellaSzam())
+                    .erkezes(model.getErkezes())
+                    .tavozas(model.getTavozas())
+                    .vezeteknev(model.getVezeteknev())
+                    .keresztnev(model.getKeresztnev())
+                    .telefonszam(model.getTelefonszam())
+                    .tipus(model.getTipus())
+                    .aram(model.getAram())
                     .build();
         }
 

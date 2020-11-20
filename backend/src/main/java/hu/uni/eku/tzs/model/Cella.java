@@ -16,7 +16,7 @@ public class Cella
     private boolean allapot;
 
     private LocalDateTime erkezes;
-    private LocalDateTime tavozas
+    private LocalDateTime tavozas;
     private String vezeteknev;
     private String keresztnev;
     private boolean aram;

@@ -3,6 +3,7 @@ package hu.uni.eku.tzs.dao;
 import hu.uni.eku.tzs.model.Foglalas;
 
 import java.util.Collection;
+import java.util.UUID;
 
 public interface FoglalasDao {
 
@@ -10,7 +11,7 @@ public interface FoglalasDao {
 
     Collection<Foglalas> readAll();
 
-    void update(int guest_id, Guest updated);
+    void update(UUID Foglalas, Foglalas updated);
 
-    void delete(int guest_id);
+    void delete(UUID Foglalas);
 }

@@ -12,7 +12,8 @@ import java.util.stream.StreamSupport;
 
 @RequiredArgsConstructor
 @Service
-public class CellaDaoImpl implements CellaDao {
+public class CellaDaoImpl implements CellaDao
+{
 
     private final CellaRepository repository;
 
@@ -49,7 +50,8 @@ public class CellaDaoImpl implements CellaDao {
                     entity.getCella_id(),
                     entity.getAllapot(),
                     entity.getErkezes(),
-                    entity.getErkezes(), request.getVezeteknev(),
+                    entity.getErkezes(),
+                    entity.getVezeteknev(),
                     entity.getKeresztnev(),
                     entity.getAram(),
                     entity.getTipus()

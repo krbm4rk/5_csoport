@@ -4,8 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
-
-import java.time.LocalDateTime
+import java.time.LocalDateTime;
 
 @Entity
 @Builder
@@ -23,7 +22,7 @@ public class Cella {
     @Column
     private LocalDateTime imaginaryPart;
     @Column
-    private LocalDateTime tavozas
+    private LocalDateTime tavozas;
     @Column
     private String vezeteknev;
     @Column

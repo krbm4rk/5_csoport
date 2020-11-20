@@ -12,5 +12,7 @@ public interface CellaDao {
 
     void update(Cella original, Cella updated);
 
+    void update(int cella_id, Cella updated);
+
     void delete(Cella cella);
 }

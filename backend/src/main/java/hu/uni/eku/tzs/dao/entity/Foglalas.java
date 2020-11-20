@@ -1,36 +1,40 @@
 package hu.uni.eku.tzs.dao.entity;
 
-import hu.uni.eku.tzs.model.FoglalasDto;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.Type;
 
-
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Data
-@Table
-@ToString(exclude = "reservation")
-@EqualsAndHashCode(exclude = "reservation")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Foglalas {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Type(type="uuid-char")
-    private UUID id;
+    private UUID Foglalas_Id;
+    @Column
+    private int cellaSzam;
+    @Column
+    private String erkezes;
+    @Column
+    private String tavozas;
+    @Column
+    private String vezeteknev;
+    @Column
+    private String keresztnev;
+    @Column
+    private String telefonszam;
+    @Column
+    private int tipus;
+    @Column
+    private int aram; //bolean tipus kéne
 
-    private String name;
-
-    private LocalDate bornAt;
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Reservation reservation;
-
-    public GuestDto toGuestDto() {
-        return new GuestDto(id, name);
-    }
 }
