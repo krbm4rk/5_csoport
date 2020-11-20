@@ -1,10 +1,6 @@
 package hu.uni.eku.tzs.service.exceptions;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
-public class FoglalasAlreadyExistsExeptions {
+public class FoglalasAlreadyExistsExeptions extends Exception {
     public FoglalasAlreadyExistsExeptions() {
     }
 

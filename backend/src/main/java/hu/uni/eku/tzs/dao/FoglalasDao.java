@@ -9,7 +9,7 @@ public interface FoglalasDao {
 
     void create(Foglalas foglalas);
 
-    Collection<Foglalas> readAll();
+    Collection<Foglalas> fetchAll();
 
     void update(UUID Foglalas, Foglalas updated);
 

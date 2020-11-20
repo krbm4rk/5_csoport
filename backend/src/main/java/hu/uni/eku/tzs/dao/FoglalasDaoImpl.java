@@ -15,7 +15,6 @@ import java.util.stream.StreamSupport;
 @RequiredArgsConstructor
 @Service
 public class FoglalasDaoImpl implements FoglalasDao {
-
     private final FoglalasRepository repository;
 
     @Override
@@ -24,7 +23,7 @@ public class FoglalasDaoImpl implements FoglalasDao {
     }
 
     @Override
-    public Collection<Foglalas> readAll() {
+    public Collection<Foglalas> fetchAll() {
         return StreamSupport.stream(repository.findAll().spliterator(),false)
                 .map(entity -> FoglalasEntityModelConverter.entity2model(entity))
                 .collect(Collectors.toList());
@@ -56,7 +55,7 @@ public class FoglalasDaoImpl implements FoglalasDao {
                     entity.getKeresztnev(),
                     entity.getTelefonszam(),
                     entity.getTipus(),
-                    entity.getAram()   //bolean tipus kéne
+                    entity.isAram()
 
             );
         }
@@ -71,7 +70,7 @@ public class FoglalasDaoImpl implements FoglalasDao {
                     .keresztnev(model.getKeresztnev())
                     .telefonszam(model.getTelefonszam())
                     .tipus(model.getTipus())
-                    .aram(model.getAram())
+                    .aram(model.isAram())
                     .build();
         }
 

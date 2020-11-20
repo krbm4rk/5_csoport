@@ -5,6 +5,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -23,9 +24,9 @@ public class Foglalas {
     @Column
     private int cellaSzam;
     @Column
-    private String erkezes;
+    private Date erkezes;
     @Column
-    private String tavozas;
+    private Date tavozas;
     @Column
     private String vezeteknev;
     @Column
@@ -35,6 +36,6 @@ public class Foglalas {
     @Column
     private int tipus;
     @Column
-    private int aram; //bolean tipus kéne
+    private boolean aram;
 
 }

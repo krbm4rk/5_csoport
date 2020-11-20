@@ -1,10 +1,11 @@
 package hu.uni.eku.tzs.controller;
 
-import hu.uni.eku.tzs.controller.dto.ComplexNumberDto;
-import hu.uni.eku.tzs.controller.dto.ComplexNumberRecordRequestDto;
-import hu.uni.eku.tzs.model.ComplexNumber;
-import hu.uni.eku.tzs.service.ComplexNumberService;
-import hu.uni.eku.tzs.service.exceptions.ComplexNumberAlreadyExistsException;
+import hu.uni.eku.tzs.controller.dto.FoglalasDto;
+import hu.uni.eku.tzs.controller.dto.FoglalasRecordRequestDto;
+import hu.uni.eku.tzs.model.Foglalas;
+import hu.uni.eku.tzs.service.FoglalasService;
+import hu.uni.eku.tzs.service.exceptions.FoglalasAlreadyExistsExeptions;
+import hu.uni.eku.tzs.service.exceptions.FoglalasNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -19,41 +20,36 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/complex-number")
+@RequestMapping(value = "/foglalas")
 @RequiredArgsConstructor
-@Api(tags = "Complex Numbers")
+@Api(tags = "Foglalas")
 @Slf4j
 
 public class FoglalasController {
     private final FoglalasService service;
 
-    @PostMapping("/record")
-    @ApiOperation(value = "Record")
-    public void record(
-            @RequestBody
-                    ComplexNumberRecordRequestDto request
-    ){
-        log.info("Recording of Complex Number ({},{})",request.getReal(),request.getImag());
-        try {
-            service.record(new ComplexNumber(request.getReal(),request.getImag()));
-        } catch (ComplexNumberAlreadyExistsException e) {
-            log.info("Complex number ({},{}) is already exists! Message: {}", request.getReal(),request.getImag(), e.getMessage());
-            throw new ResponseStatusException(
-                    HttpStatus.CONFLICT,
-                    e.getMessage()
-            );
-        }
-    }
-
-    @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = {"/"},produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value= "Query Complex Numbers")
-    public Collection<ComplexNumberDto> query(){
-        return service.readAll().stream().map(model ->
-                ComplexNumberDto.builder()
-                        .real(model.getReal())
-                        .imaginary(model.getImaginary())
-                        .build()
+    @ApiOperation(value = "Keresd meg a foglalast")
+    public Collection<FoglalasDto>fetchAll(){
+            return  FoglalasService.fetchAll().stream().map(foglalas -> FoglalasDto.builder()
+                .Foglalas_Id(foglalas.getFoglalas_Id())
+                .cellaSzam(foglalas.getCellaSzam())
+                .erkezes(foglalas.getErkezes())
+                .tavozas(foglalas.getTavozas())
+                .vezeteknev(foglalas.getVezeteknev())
+                .keresztnev(foglalas.getKeresztnev())
+                .telefonszam(foglalas.getTelefonszam())
+                .tipus(foglalas.getTipus())
+                .aram(foglalas.isAram())
+                .build()
         ).collect(Collectors.toList());
+    }
+    @PostMapping(value = {"/create"})
+    @ApiOperation(value = "foglalás létrehozása")
+    public  void create(@RequestBody FoglalasRecordRequestDto request){
+        try {
+
+        }
     }
 }

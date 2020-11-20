@@ -48,12 +48,12 @@ public class CellaDaoImpl implements CellaDao
         private static Cella entity2model(hu.uni.eku.tzs.dao.entity.Cella entity){
             return new Cella(
                     entity.getCella_id(),
-                    entity.getAllapot(),
+                    entity.isAllapot(),
                     entity.getErkezes(),
                     entity.getErkezes(),
                     entity.getVezeteknev(),
                     entity.getKeresztnev(),
-                    entity.getAram(),
+                    entity.isAram(),
                     entity.getTipus()
             );
         }
@@ -61,7 +61,7 @@ public class CellaDaoImpl implements CellaDao
         private static hu.uni.eku.tzs.dao.entity.Cella model2entity(Cella model){
             return hu.uni.eku.tzs.dao.entity.Cella.builder()
                     .cella_id(model.getCella_id())
-                    .allapot(model.getAllapot())
+                    .allapot(model.isAllapot())
                     .erkezes(model.getErkezes())
                     .tavozas(model.getTavozas())
                     .vezeteknev(model.getVezeteknev())
