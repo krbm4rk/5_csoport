@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collection;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
@@ -32,7 +33,7 @@ public class FoglalasController {
     @ResponseBody
     @ApiOperation(value = "Keresd meg a foglalast")
     public Collection<FoglalasDto>fetchAll(){
-            return  FoglalasService.fetchAll().stream().map(foglalas -> FoglalasDto.builder()
+            return  service.fetchAll().stream().map(foglalas -> FoglalasDto.builder()
                 .Foglalas_Id(foglalas.getFoglalas_Id())
                 .cellaSzam(foglalas.getCellaSzam())
                 .erkezes(foglalas.getErkezes())
@@ -49,7 +50,34 @@ public class FoglalasController {
     @ApiOperation(value = "foglalás létrehozása")
     public  void create(@RequestBody FoglalasRecordRequestDto request){
         try {
-
+            service.create(new Foglalas(request.getFoglalas_Id(),request.getCellaSzam(),request.getErkezes(),
+                    request.getTavozas(),request.getVezeteknev(),request.getKeresztnev(), request.getTelefonszam(),
+                    request.getTipus(), request.isAram()));
+        }catch (FoglalasAlreadyExistsExeptions e){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
         }
     }
+    @PutMapping(value = {"/{Foglalas_Id}"})
+    @ApiOperation(value = "Foglalás frissítése")
+    public  void update(@PathVariable UUID Foglalas_Id,@RequestBody FoglalasRecordRequestDto request )
+    {
+        try {
+            service.update(Foglalas_Id, new Foglalas(request.getFoglalas_Id(),request.getCellaSzam(),
+                    request.getErkezes(),request.getTavozas(),request.getVezeteknev(),request.getKeresztnev(),
+                    request.getTelefonszam(), request.getTipus(), request.isAram()));
+        }catch (FoglalasNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
+    }
+    @DeleteMapping(value = {"/{Foglalas_Id}"})
+    @ApiOperation(value = "Foglalás törlése")
+    public void delete(@PathVariable UUID Foglalas_Id)
+    {
+        try {
+            service.delete(Foglalas_Id);
+        }catch (FoglalasNotFoundException e){
+            throw  new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
+    }
+
 }
