@@ -1,11 +1,11 @@
 package hu.uni.eku.tzs.dao.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
-import java.time.LocalDateTime
+import java.util.UUID;
 
 @Entity
 @Builder
@@ -17,19 +17,8 @@ public class Cella {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int cella_id;
+    @Type(type="uuid-char")
+    private UUID cellaId;
     @Column
     private boolean allapot;
-    @Column
-    private LocalDateTime erkezes;
-    @Column
-    private LocalDateTime tavozas
-    @Column
-    private String vezeteknev;
-    @Column
-    private String keresztnev;
-    @Column
-    private boolean aram;
-    @Column
-    private int tipus;
 }

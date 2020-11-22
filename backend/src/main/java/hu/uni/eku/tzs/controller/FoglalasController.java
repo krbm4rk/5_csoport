@@ -8,7 +8,6 @@ import hu.uni.eku.tzs.service.exceptions.FoglalasAlreadyExistsExeptions;
 import hu.uni.eku.tzs.service.exceptions.FoglalasNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

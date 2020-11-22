@@ -5,22 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CellaRecordRequestDto
-{
-    private int cella_id;
-
+public class CellaRecordRequestDto {
+    private UUID cellaId;
     private boolean allapot;
-
-    private LocalDateTime erkezes;
-    private LocalDateTime tavozas
-    private String vezeteknev;
-    private String keresztnev;
-    private boolean aram;
-    private int tipus;
 }
