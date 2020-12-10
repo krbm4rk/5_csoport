@@ -6,14 +6,14 @@ class FoglalasRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            Foglalas_Id : 0,
-            cellaszam : 0,
+            Foglalas_Id : null,
+            cellaszam : null,
             erkezes : null,
             tavozas : null,
             vezeteknev : "",
             keresztnev : "",
             telefonszam : "",
-            tipus : 0,
+            tipus : null,
             aram : false
         };
         this.formOnChange = this.formOnChange.bind(this);

@@ -1,19 +1,34 @@
 import React from 'react';
 import './App.scss';
+import './App.css';
 import FoglalasRecordingForm from "./component/FoglalasRecordingForm";
 import FoglalasList from "./component/FoglalasList";
+import BillingRecordingForm from "./component/BillingRecordingForm";
+import BillingList from "./component/BillingList";
 
 function App() {
     return (
         <div className={["App","container"]}>
-            <div className={"row"}>
-                <div className={"col-md-3"}></div>
-                <div className={"col-md-6"}>
+            <div className="header">
+                <a href="#default" className="logo">Kemping</a>
+                <div className="header-right">
+                    <a className="active" href="#home">Kezdőlap</a>
+                </div>
+            </div>
+            <div id="content" className="round">
+                <div id="firstdiv">
                     <FoglalasRecordingForm/>
                     <FoglalasList/>
                 </div>
-                <div className={"col-md-3"}></div>
+                <div id="firstdiv">
+                    <BillingRecordingForm/>
+                    <BillingList/>
+                </div>
             </div>
+
+            <footer className="round">
+                <p>Group V</p>
+            </footer>
         </div>
     );
 }
