@@ -2,11 +2,11 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/FoglalasActionConstants'
 
-export const recordFoglalas = ({Foglalas_Id, cellaszam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram }) =>{
+export const recordFoglalas = ({Foglalas_Id, cellaSzam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram }) =>{
     axios.post('/foglalas/record',
         {
-            Foglalasfoglalas_Id : Foglalasfoglalas_Id,
-            cellaszam : cellaszam,
+            Foglalas_Id : Foglalas_Id,
+            cellaSzam : cellaSzam,
             erkezes : erkezes,
             tavozas : tavozas,
             vezeteknev : vezeteknev,
@@ -16,7 +16,7 @@ export const recordFoglalas = ({Foglalas_Id, cellaszam, erkezes, tavozas, vezete
             aram : aram
         })
         .then(() => {
-            fetchComplexNumbers();
+            fetchFoglalasok();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -24,7 +24,7 @@ export const recordFoglalas = ({Foglalas_Id, cellaszam, erkezes, tavozas, vezete
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchComplexNumbers();
+            fetchFoglalasok();
         });
 }
 
@@ -36,4 +36,19 @@ export const fetchFoglalasok = () =>{
             payload: resp.data
         });
     })
+}
+
+export const deleteFoglalas = ({Foglalas_Id}) =>{
+    axios.delete(`/guest/${Foglalas_Id}`)
+        .then(() => {
+
+            dispatcher.dispatch({action : actionConstants.clearError});
+        })
+        .catch((err) => {
+            dispatcher.dispatch({
+                action : actionConstants.showError,
+                payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
+            });
+
+        });
 }

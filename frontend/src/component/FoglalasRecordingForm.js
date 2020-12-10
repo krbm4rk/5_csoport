@@ -1,5 +1,5 @@
 import React from "react";
-import * as actions from '../action/FoglalasActions';
+import * as actions from '../action/FoglalasAction';
 import ErrorMessageWell from "./ErrorMessageWell";
 class FoglalasRecordingForm extends React.Component{
 

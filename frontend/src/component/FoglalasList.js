@@ -1,12 +1,12 @@
 import React from 'react';
 import {default as store} from '../store/FoglalasStore'
-import FoglalasListItem from "../../../../../Adatok/FoglalasListItem";
+import FoglalasListItem from "./FoglalasListItem";
 
 class FoglalasList extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {foglalas : []};
+        this.state = {foglalasok : []};
         this._updateState = this._updateState.bind(this);
     }
 
@@ -21,17 +21,17 @@ class FoglalasList extends React.Component{
     }
 
     _updateState(){
-        this.setState({foglalas : store._foglalasok});
+        this.setState({foglalasok : store._foglalasok});
     }
 
     render() {
         return(
             <div>
-                {this.state.foglalasok.map(({Foglalas_Id, cellaszam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram}, index)=>{
+                {this.state.foglalasok.map(({Foglalas_Id, cellaSzam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram}, index)=>{
                     return(
-                        <FoglalasListItem key={index} Foglalas_Id={Foglalas_Id} cellaszam={cellaszam} erkezes={erkezes}
-                        tavozas={tavozas} vezeteknev={vezeteknev} keresztnev={keresztnev} telefonszam={telefonszam}
-                        tipus={tipus} aram={aram}/>
+                        <FoglalasListItem key={index} Foglalas_Id={Foglalas_Id} cellaSzam={cellaSzam} erkezes={erkezes}
+                                          tavozas={tavozas} vezeteknev={vezeteknev} keresztnev={keresztnev} telefonszam={telefonszam}
+                                          tipus={tipus} aram={aram}/>
                     );
                 })}
             </div>
