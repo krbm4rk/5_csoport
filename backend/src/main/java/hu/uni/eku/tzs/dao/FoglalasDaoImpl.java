@@ -21,22 +21,30 @@ public class FoglalasDaoImpl implements FoglalasDao {
     }
 
     @Override
-    public Collection<Foglalas> fetchAll() {
+    public Collection<Foglalas> readAll() {
         return StreamSupport.stream(repository.findAll().spliterator(),false)
                 .map(entity -> FoglalasEntityModelConverter.entity2model(entity))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public void update(UUID Foglalas_Id, Foglalas updated) {
-        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalas_Id(Foglalas_Id);
-        temp.setFoglalas_Id(updated.getFoglalas_Id());
+    public void update(Integer foglalasId, Foglalas updated) {
+        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalasId(foglalasId);
+        temp.setFoglalasId(updated.getFoglalasId());
+        temp.setCellaSzam(updated.getCellaSzam());
+        temp.setErkezes(updated.getErkezes());
+        temp.setTavozas(updated.getTavozas());
+        temp.setVezeteknev(updated.getVezeteknev());
+        temp.setKeresztnev(updated.getKeresztnev());
+        temp.setTelefonszam(updated.getTelefonszam());
+        temp.setTipus(updated.getTipus());
+        temp.setAram(updated.isAram());
         repository.save(temp);
     }
 
     @Override
-    public void delete(UUID Foglalas_Id) {
-        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalas_Id(Foglalas_Id);
+    public void delete(Integer foglalasId) {
+        hu.uni.eku.tzs.dao.entity.Foglalas temp = repository.findByFoglalasId(foglalasId);
         if(temp != null)
             repository.delete(temp);
     }
@@ -45,7 +53,7 @@ public class FoglalasDaoImpl implements FoglalasDao {
 
         private static Foglalas entity2model(hu.uni.eku.tzs.dao.entity.Foglalas entity){
             return new Foglalas(
-                    entity.getFoglalas_Id(),
+                    entity.getFoglalasId(),
                     entity.getCellaSzam(),
                     entity.getErkezes(),
                     entity.getTavozas(),
@@ -60,7 +68,7 @@ public class FoglalasDaoImpl implements FoglalasDao {
 
         private static hu.uni.eku.tzs.dao.entity.Foglalas model2entity(Foglalas model){
             return hu.uni.eku.tzs.dao.entity.Foglalas.builder()
-                    .Foglalas_Id(model.getFoglalas_Id())
+                    .foglalasId(model.getFoglalasId())
                     .cellaSzam(model.getCellaSzam())
                     .erkezes(model.getErkezes())
                     .tavozas(model.getTavozas())

@@ -9,9 +9,9 @@ public interface FoglalasDao {
 
     void create(Foglalas foglalas);
 
-    Collection<Foglalas> fetchAll();
+    Collection<Foglalas> readAll();
 
-    void update(UUID Foglalas, Foglalas updated);
+    void update(Integer foglalasId, Foglalas updated);
 
-    void delete(UUID Foglalas);
+    void delete(Integer foglalasId);
 }
