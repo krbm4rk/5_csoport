@@ -18,10 +18,11 @@ public class FoglalasServiceImpl implements FoglalasService {
     private final FoglalasDao dao;
 
     @Override
-    public void create(Foglalas foglalas)throws FoglalasAlreadyExistsExeptions{
-        final boolean alreadyExists = dao.fetchAll()
+    public void record(Foglalas foglalas)throws FoglalasAlreadyExistsExeptions{
+        final boolean alreadyExists = dao.readAll()
                 .stream()
-                .anyMatch(foglal -> foglal.getFoglalas_Id() == foglalas.getFoglalas_Id());
+                .anyMatch(foglal ->
+                        foglal.getFoglalasId() == foglalas.getFoglalasId());
         if (alreadyExists){
             throw new FoglalasAlreadyExistsExeptions(String.format("Foglalás (%s) már van!",foglalas.toString()));
         }
@@ -30,17 +31,17 @@ public class FoglalasServiceImpl implements FoglalasService {
     }
 
     @Override
-    public  Collection<Foglalas>fetchAll(){
-        return dao.fetchAll();
+    public  Collection<Foglalas>readAll(){
+        return dao.readAll();
     }
 
-    @Override
-    public void update(UUID Foglalas_Id, Foglalas updatedFoglalas)throws FoglalasNotFoundException{
+    /*@Override
+    public void update(Integer Foglalas_Id, Foglalas updatedFoglalas)throws FoglalasNotFoundException{
         dao.update(Foglalas_Id, updatedFoglalas);
-    }
+    }*/
 
     @Override
-    public  void delete(UUID Foglalas_Id)throws  FoglalasNotFoundException{
-        dao.delete(Foglalas_Id);
+    public  void delete(Integer foglalasId)throws  FoglalasNotFoundException{
+        dao.delete(foglalasId);
     }
 }
