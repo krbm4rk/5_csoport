@@ -5,7 +5,6 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -19,14 +18,15 @@ public class Foglalas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Type(type="uuid-char")
-    private UUID Foglalas_Id;
+    private Integer Id;
     @Column
-    private int cellaSzam;
+    private Integer foglalasId;
     @Column
-    private Date erkezes;
+    private Integer cellaSzam;
     @Column
-    private Date tavozas;
+    private LocalDateTime erkezes;
+    @Column
+    private LocalDateTime tavozas;
     @Column
     private String vezeteknev;
     @Column
@@ -34,7 +34,7 @@ public class Foglalas {
     @Column
     private String telefonszam;
     @Column
-    private int tipus;
+    private Integer tipus;
     @Column
     private boolean aram;
 
