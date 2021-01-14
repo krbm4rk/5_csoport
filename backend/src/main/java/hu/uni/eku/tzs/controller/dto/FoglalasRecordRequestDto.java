@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -14,13 +14,13 @@ import java.util.UUID;
 @AllArgsConstructor
 public class FoglalasRecordRequestDto {
 
-    private UUID Foglalas_Id;
-    private int cellaSzam;
-    private Date erkezes;
-    private Date tavozas;
+    private Integer foglalasId;
+    private Integer cellaSzam;
+    private LocalDateTime erkezes;
+    private LocalDateTime tavozas;
     private String vezeteknev;
     private String keresztnev;
     private String telefonszam;
-    private int tipus;
+    private Integer tipus;
     private boolean aram;
 }
