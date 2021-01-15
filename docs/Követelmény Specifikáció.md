@@ -17,7 +17,8 @@
     - Kért - e áramot vagy lakókocsit.
     - A vendég neve.
     - Mettől meddig foglalta le
-  Mindez elérhető a recepciós számára , aki ebböl számolja ki,
+
+- Mindez elérhető a recepciós számára , aki ebböl számolja ki,
   hogy az adott cella foglaló mennyit is fizet az eltöltött napokért.
   
 ## Jelenlegi helyzet
@@ -47,6 +48,18 @@
 - A projekt céla egy olyan termék készítése ami kielégíti a kemping számára a felzárkózást
   a többi konkurens céghez online környezetet bisztosítva garantálja a kemping zavartalan
   működését.
+  
+- Csökkentse a pénzkezelés idejét és költségeit.
+  Megkönnyítse az alkalmazottak munkáját.
+  Könyvelés egyszerűsítése.
+  
+- A rendszer tegye követhetőbbé, mely cellák vannak lefoglalva és melyek a legnépszerűbbek.
+
+- Lehessen kilistázni az aktuális foglalásokat:
+  - Melyik cella van lefoglalva.
+  - Kért - e áramot vagy lakókocsit.
+  - A vendég neve.
+  - Mettől meddig foglalta le.
 
 ## Funkcionális követelmények
 
