@@ -14,7 +14,8 @@
   Minden cellához kérhető akár áram is.
   Ki lehet listázni az aktuális ffoglalásokat minden adaatukkal együtt:
     - Melyik cella van lefoglalva.
-    - Kért - e áramot vagy lakókocsit.
+    - Kért - e áramot
+    - Kért - e lakókocsit.
     - A vendég neve.
     - Mettől meddig foglalta le
 
@@ -57,7 +58,8 @@
 
 - Lehessen kilistázni az aktuális foglalásokat:
   - Melyik cella van lefoglalva.
-  - Kért - e áramot vagy lakókocsit.
+  - Kért - e áramot.
+  - Kért - e lakókocsit.
   - A vendég neve.
   - Mettől meddig foglalta le.
 
@@ -75,17 +77,53 @@
 ## Igényelt üzleti folyamatok
 
 - A megrendelőnek kérésére a recepciós munkáját könnyítjük meg azzal hogy lekérheti az
-ügyfelek adatait, és erre vonatkozóan a rendszer kiszámolja a tartózkodási időt , és a 
-fizetendő összeget.
+ügyfelek adatait.
 
 ## Követelménylista
 
-- (A programozás szempontjából talán a legfontosabb része a
-   dokumentumnak. Itt kell leírni azt, hogy milyen funkciókkal kell
-   rendelkeznie a programunknak, ezeknek milyen al-funkciói vannak)
+- A programozás szempontjából talán a legfontosabb része a
+  dokumentumnak. Itt kell leírni azt, hogy milyen funkciókkal kell
+  rendelkeznie a programunknak, ezeknek milyen al-funkciói vannak.
+  
+- ID: 1
+  - Modul: Feladattípus
+  - Név: Hozzáadás
+  - Verzió: 1.0
+  - Kifejtés: Adatok hozzáadása az adatbázishoz
+  
+- ID: 2
+  - Modul: Feladattípus
+  - Név: Törlés
+  - Verzió: 1.0
+  - Kifejtés: Adatok törlése az adatbázisból
+  
+- ID: 3
+  - Modul: Feladattípus
+  - Név: Listázás
+  - Verzió: 1.0
+  - Kifejtés: Adatok listázása
+  
+- ID: 4
+  - Modul: Felület
+  - Név: Navigációs menü
+  - Verzió: 1.0
+  - Kifejtés: Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
+  
+- ID: 5
+  - Modul: Felület
+  - Név: Foglalás felület
+  - Verzió: 1.0
+  - Kifejtés: A foglalások kezelésének egy felület. Lehet hozzáadni, törölni és az űrlap alatt listázni.
+  
+- ID: 6
+  - Modul: Felület
+  - Név: Számla felület
+  - Verzió: 1.0
+  - Kifejtés: A számlák kezelésének egy felület. Lehet hozzáadni és az űrlap alatt listázni.
    
 ## Fogalomtár
 
-- cella: itt most nem börtönre kell gondolni , hanem parcellára , felosztott részegység
+- Cella: itt most nem börtönre kell gondolni , hanem parcellára , felosztott részegység
+- Számla: Fizetésről bizonylat. Mint a boltokban a nyugta.
 
   
