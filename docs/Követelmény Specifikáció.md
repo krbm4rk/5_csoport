@@ -63,8 +63,14 @@
 
 ## Funkcionális követelmények
 
-- Frontend
-- Backend
+- Foglalás:
+  - Új foglalás hozzáadása.
+  - Meglévő foglalás törlése.
+  - Foglalások kilistázása.
+
+- Számla:
+  - Új számla hozzáadása.
+  - Meglévő számlák kilistázása.
 
 ## Igényelt üzleti folyamatok
 
