@@ -2,10 +2,10 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/FoglalasActionConstants'
 
-export const recordFoglalas = ({Foglalas_Id, cellaSzam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram }) =>{
+export const recordFoglalas = ({foglalasId, cellaSzam, erkezes, tavozas, vezeteknev, keresztnev, telefonszam, tipus, aram }) =>{
     axios.post('/foglalas/record',
         {
-            Foglalas_Id : Foglalas_Id,
+            foglalasId : foglalasId,
             cellaSzam : cellaSzam,
             erkezes : erkezes,
             tavozas : tavozas,
@@ -38,8 +38,8 @@ export const fetchFoglalasok = () =>{
     })
 }
 
-export const deleteFoglalas = ({Foglalas_Id}) =>{
-    axios.delete(`/foglalas/${Foglalas_Id}`)
+export const deleteFoglalas = ({foglalasId}) =>{
+    axios.delete(`/foglalas/${foglalasId}`)
         .then(() => {
 
             dispatcher.dispatch({action : actionConstants.clearError});

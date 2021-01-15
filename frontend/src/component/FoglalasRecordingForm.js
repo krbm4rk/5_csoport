@@ -6,15 +6,15 @@ class FoglalasRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            Foglalas_Id : null,
-            cellaszam : null,
+            foglalasId : null,
+            cellaSzam : null,
             erkezes : null,
             tavozas : null,
             vezeteknev : "",
             keresztnev : "",
             telefonszam : "",
             tipus : null,
-            aram : false
+            aram : true
         };
         this.formOnChange = this.formOnChange.bind(this);
     }
@@ -28,11 +28,11 @@ class FoglalasRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"Foglalas_Id"} >Foglalas ID</label>
-                <input type={"number"} id={"Foglalas_Id"} name={"Foglalas_Id"} value={this.state.Foglalas_Id} onChange={this.formOnChange}/>
+                <label htmlFor={"foglalasId"} >Foglalas ID</label>
+                <input type={"number"} id={"foglalasId"} name={"foglalasId"} value={this.state.foglalasId} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"cellaszam"}>Cellaszám</label>
-                <input type={"number"} id={"cellaszam"} name={"cellaszam"} value={this.state.cellaszam} onChange={this.formOnChange}/>
+                <label htmlFor={"cellaSzam"}>Cellaszám</label>
+                <input type={"number"} id={"cellaSzam"} name={"cellaSzam"} value={this.state.cellaSzam} onChange={this.formOnChange}/>
                 <br/>
                 <label htmlFor={"erkezes"}>Érkezés</label>
                 <input type={"datetime-local"} id={"erkezes"} name={"erkezes"} value={this.state.erkezes} onChange={this.formOnChange}/>
