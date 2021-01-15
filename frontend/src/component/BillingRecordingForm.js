@@ -6,6 +6,7 @@ class BillingRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            billId : null,
             arrive : null,
             leave : null,
             firstName : null,
@@ -25,6 +26,9 @@ class BillingRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
+                <label htmlFor={"billId"} >Bill ID</label>
+                <input type={"number"} id={"billId"} name={"billId"} value={this.state.billId} onChange={this.formOnChange}/>
+                <br/>
                 <label htmlFor={"arrive"} >Érkezés</label>
                 <input type={"datetime-local"} id={"arrive"} name={"arrive"} value={this.state.arrive} onChange={this.formOnChange}/>
                 <br/>

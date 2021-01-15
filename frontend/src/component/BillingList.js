@@ -27,10 +27,10 @@ class BillingList extends React.Component{
     render() {
         return(
             <div>
-                {this.state.bills.map(({arrive, leave, firstName, surName, numberOfDays, totalAmount}, index)=>{
+                {this.state.bills.map(({billId, arrive, leave, firstName, surName, numberOfDays, totalAmount}, index)=>{
                     return(
-                        <BillingListItem key={index} arrive = {arrive} leave = {leave} firstName = {firstName}
-                                          surName = {surName} numberOfDays = {numberOfDays} totalAmount = {totalAmount}/>
+                        <BillingListItem key={index} billId = {billId} arrive = {arrive} leave = {leave} firstName = {firstName}
+                                         surName = {surName} numberOfDays = {numberOfDays} totalAmount = {totalAmount}/>
                     );
                 })}
             </div>

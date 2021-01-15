@@ -1,8 +1,8 @@
 import React from 'react';
 
-function BillingListItem({arrive, leave, firstName, surName, numberOfDays, totalAmount}){
+function BillingListItem({billId, arrive, leave, firstName, surName, numberOfDays, totalAmount}){
     return (
-        <span>({arrive}, {leave}, {firstName}, {surName}, {numberOfDays}, {totalAmount})</span>
+        <span>({billId}, {arrive}, {leave}, {firstName}, {surName}, {numberOfDays}, {totalAmount})</span>
     );
 }
 
