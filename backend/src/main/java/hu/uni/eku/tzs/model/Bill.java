@@ -4,19 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import java.time.LocalDate;
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Bill {
-    private LocalDate arrive;
-    private LocalDate leave;
+    private Integer billId;
+    private LocalDateTime arrive;
+    private LocalDateTime leave;
     private String firstName;
     private String surName;
-    private short numberOfDays;
-    private int totalAmount;
+    private Integer numberOfDays;
+    private Integer totalAmount;
 }
 
