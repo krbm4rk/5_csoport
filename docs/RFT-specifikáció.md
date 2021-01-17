@@ -1,4 +1,9 @@
+# Projekt bemutatása 
+
+- Ez a projektterv egy kemping rendszert mutat be, amiben majdnem minden szolgáltatás megtalálható. A projekt célja, hogy a kemping egyszerűen legyen kezelni.
+
 # **A munka feltételei**
+
 ## **Munkakörnyezet**
 A projekt a következő munkaállomásokat fogja használni a munka során:
 
