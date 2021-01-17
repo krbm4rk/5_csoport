@@ -1,4 +1,4 @@
-# Követelmény specifikáció
+# Funkcionális specifikáció
 
 ## Áttekintés
 - Ebben a fejezetben röviden ismertetem a projektünk egészét. Milyen
