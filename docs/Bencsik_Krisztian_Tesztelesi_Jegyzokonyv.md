@@ -9,3 +9,5 @@ Név: Bencsik Krisztián
 
 Beosztás: Backend Fejlesztő
 
+Dátum: 2020.01.15
+
