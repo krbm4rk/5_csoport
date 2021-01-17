@@ -7,3 +7,5 @@
 
 Név: Bencsik Krisztián
 
+Beosztás: Backend Fejlesztő
+
