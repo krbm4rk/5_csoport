@@ -19,3 +19,4 @@ Dátum: 2020.01.15
 |3.|Cellafoglalás|<p>Swagger,</p><p>Google crome Böngésző</p>|Dátum és vendégek száma alapján foglalás leadása, adatbázisba felvétel|Dátum és vendégek száma alapján foglalás leadása, adatbázisba felvétel|Megfelelő|
 |4.|Foglalások lekérése|<p>Swagger,</p><p>Google crome Böngésző</p>|Visszatér az összes Cellafoglalással|Visszatér az összes Cellafoglalással|Megfelelő|
 |5.|Recepciós felvétel|<p>Swagger,</p><p>Google crome Böngésző</p>|ID megkapása, Cella megadásával,|ID megkapása, Cella megadásával,|Megfelelő|
+|6.|Vendégek lekérése|<p>Swagger,</p><p>Google crome Böngésző</p>|Visszatér az összes vendéggel|Visszatér az összes vendéggel|Megfelelő|
