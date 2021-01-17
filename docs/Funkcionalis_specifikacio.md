@@ -82,14 +82,14 @@
   - Verzió: 1.0
   - Kifejtés: A számlák kezelésének egy felület. Lehet hozzáadni és az űrlap alatt listázni.
    
-##Használati esetek
+## Használati esetek
 
 - A recepciós kezeli a rendszert.
 - A recepciós adatokat tud hozzáadni és módosítani azokat.
 - A recepciós adatokat tud törölni.
 - A recepciós láthatja az adatbázisban lévő adatokat.
 
-##Forgatókönyv
+## Forgatókönyv
 
 - A rendszer csak a recepciós tudja kezelni. Egyszerre egy dolgot tud csinálni
 
