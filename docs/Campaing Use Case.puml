@@ -5,7 +5,7 @@ vendég -> (hely kérvényezése a recepcióstól)
 (kérhet plusz költséges dolgokat)  .> :recepciós:
 :recepciós: --> (lekérdezheti az üres helyeket \n adott intervallumon belül)
 
-:recepciós: --> (kiadhat helyet)
-:recepciós: --> (foglalhat le helyet )
-:recepciós: -->(számlát állít ki\n távozáskor)
+:recepciós: --> (kiadhat helyet a vendégnek)
+:recepciós: --> (foglalhat le helyet a vendégnek )
+:recepciós: -->(a recepciós számlát állít ki\n a vendég távozáskor)
 @enduml
