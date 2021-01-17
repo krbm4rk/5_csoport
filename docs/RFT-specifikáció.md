@@ -15,5 +15,13 @@ Gigabite Nvidia GeForce 1060 STRIX 16GB
 
 Google Chrome 87.4280.88 (64bit)
 
+## Kockázatmenedzsment
 
+- Betegség (közepes): a projekt elkészülését késleltetheti, ha egy csapattag váratlanul megbetegedik. Ennek következtében nem tud megfelelő hatásfokkal, vagy egyáltalán dolgozni.
+
+- Egy számítógép meghibásodása (nagy): előfordulhat, hogy egy csapattag számítógépe ismeretlen okokból meghibásodhat. Ebből kifolyólag meg kell osztani az erőforrásokat, amely kellemetlen szituációkat eredményezhet.
+
+- Adatveszteség (nagy): adatveszteség esetén, a csapat nagyon nagy problémába kerülhet. Sok minden múlhat, ha elvesztjük az adatainkat főleg, ha nem készítünk biztonsági mentést.
+
+- Projekttag (esetleg a csapatot összetartó projectmanager) a kiosztott feladatot nem hajlandó elvégezni (közepes). (Valószínűség: kicsi / hatás: közepes).
 
