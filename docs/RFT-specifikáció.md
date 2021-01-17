@@ -25,3 +25,6 @@ Google Chrome 87.4280.88 (64bit)
 
 - Projekttag (esetleg a csapatot összetartó projectmanager) a kiosztott feladatot nem hajlandó elvégezni (közepes). (Valószínűség: kicsi / hatás: közepes).
 
+## csoportgyülések 
+
+- minden héten hétföként 3 órától
