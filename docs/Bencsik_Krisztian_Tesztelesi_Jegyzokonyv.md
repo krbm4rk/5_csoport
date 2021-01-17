@@ -11,3 +11,4 @@ Beosztás: Backend Fejlesztő
 
 Dátum: 2020.01.15
 
+Végső kedvezményezett részéről:
