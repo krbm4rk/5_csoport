@@ -4,3 +4,6 @@
 |**Tesztelés erőforrás-szükséglete Felhasználó oldalon**|Szerver, terminál|
 
 Átvételi eljáráson résztvevők:
+
+Név: Bencsik Krisztián
+
