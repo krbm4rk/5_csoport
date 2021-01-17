@@ -5,5 +5,5 @@
 
 Átvételi eljáráson résztvevők:
 
-Név: Bencsik Krisztián
+
 
