@@ -16,3 +16,5 @@ Végső kedvezményezett részéről:
 Név:
 
 Beosztás:
+
+Dátum:
