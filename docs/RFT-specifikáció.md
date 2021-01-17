@@ -14,7 +14,7 @@ Windows 10 pro 64bites
 
 Intel i7 7700K 4.20GHz
 
-Gigabite Nvidia GeForce 1060 STRIX 16GB
+Gigabyte Nvidia GeForce 1060 STRIX 16GB
 
 16GB Ram
 
@@ -25,20 +25,20 @@ Windows 10 pro 64bites
 
 Intel i7 7700K 4.20GHz
 
-Gigabite Nvidia GeForce 1060 STRIX 16GB
+Gigabyte Nvidia GeForce 1060 STRIX 16GB
 
 8GB Ram
 
 Opera 73.0.3856.329 (64bit)
 
 ### Bencsik Krisztián munkaállomása
-Windows 10 pro 64bites
+Windows 10 home 64bites
 
-Intel i7 7700K 4.20GHz
+Ryzen 5 3600 4.20GHz
 
-Gigabite Nvidia GeForce 1060 STRIX 16GB
+Gigabyte Radeon RX 5700 XT 8GB
 
-8GB Ram
+16GB Ram
 
 Microsoft Edge 73.0.3856.329 (64bit)
 
