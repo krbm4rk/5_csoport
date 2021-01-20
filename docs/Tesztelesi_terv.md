@@ -46,7 +46,7 @@
 |Backend inicializáció|2021.01.10|Swagger|A swagger megjeleníti a backend metódusait|Bencsik Krisztián|
 |Backend funkció teszt|2021.01.13|Swagger|A backend teszt lépései sikeresen végrehajtódnak|Bencsik Krisztián|
 |Frontend inicializáció|2021.01.15|Webstorm, webböngésző|A frontend funkció elemei megjelennek|Bencsik Krisztián|
-|Frontend funkció teszt|2021.01.16|Webstorm, webböngésző|A backend teszt lépései sikeresen végrehajtódnak|Bencsik Krisztián|
+|Frontend funkció teszt|2021.01.16|Webstorm, webböngésző|A frontend teszt lépései sikeresen végrehajtódnak|Bencsik Krisztián|
 
 
     
