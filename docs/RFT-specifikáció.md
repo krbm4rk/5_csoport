@@ -12,9 +12,9 @@ A projekt 3 gépet használt melyek az alábbiak:
 ### Szalóki Dávid saját munkaállomása:
 Windows 10 pro 64bites
 
-Intel i7 7700K 4.20GHz
+Intel i5 4460 3.40GHz
 
-Gigabyte Nvidia GeForce 1060 STRIX 16GB
+Gigabyte Nvidia GeForce 1060 STRIX 6GB
 
 16GB Ram
 
@@ -23,11 +23,11 @@ Google Chrome 87.4280.88 (64bit)
 ### Bódi Cintia Maja munkaállomása
 Windows 10 pro 64bites
 
-Intel i7 7700K 4.20GHz
+Intel i7 8700K 4.20GHz
 
-Gigabyte Nvidia GeForce 1060 STRIX 16GB
+Gigabyte Nvidia GeForce RTX 3070 8GB
 
-8GB Ram
+16GB Ram
 
 Opera 73.0.3856.329 (64bit)
 
@@ -40,7 +40,7 @@ Gigabyte Radeon RX 5700 XT 8GB
 
 16GB Ram
 
-Microsoft Edge 73.0.3856.329 (64bit)
+Google Chrome 87.4280.88 (64bit)
 
 
 ## Kockázatmenedzsment

@@ -1,6 +1,6 @@
 # Rendszerterv
 
-## Rndszer célja 
+## Rendszer célja 
 
 - A rendszer célja a recepciós munkájánka megkönnyítése a kempingben
 - A program webes felületen fut , és egy adatbázisból éri el az adatokat
